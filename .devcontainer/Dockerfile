@@ -1,5 +1,5 @@
-FROM lscr.io/linuxserver/webtop:debian-xfce
+FROM lscr.io/linuxserver/webtop:arch-xfce
 
-RUN apt update
-RUN apt install git -y
+RUN pacman -Syu
+RUN yes | pacman -S git
 RUN mkdir /usr/local/sbin
